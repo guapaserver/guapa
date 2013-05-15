@@ -1964,7 +1964,6 @@ function refresh_carrinho(row)
 	{
 		var url_virtual = $('#url_virtual').val();
 
-		//var mouseX = 50, mouseY = 50;
 		var mouseX = $(document).width()/2, mouseY = -100;
 		$(document).mousemove(function(e){
 		   mouseX = e.pageX-25;
@@ -2147,22 +2146,6 @@ function refresh_carrinho(row)
 			});
 		}
 		//FIM SETAS DO SLIDER
-	    
-		/*if($(".info_0").length > 0)
-		{
-		 	$(".info_0").fadeIn("fast");
-		 	
-		 	setTimeout(function(){
-		 	$(".info").animate({
-				    bottom: '0',
-			}, {
-					duration: 1500,
-					easing: "easeOutBounce"
-			});
-			
-			},2500)
-				    
-		}*/
 		
 		//Efeitos das Zetas
 		var time_bounce = 500;

@@ -203,6 +203,20 @@ function atualiza_slide(sld, direcao) {
 						    top: '0px'
 						}, 550, 'swing');
 						//intervalo_slider();
+						
+						$('#control_div').hide();
+						$('#control_div').css( "zIndex", 0 );
+						$('#control_div').fadeIn("slow");
+						/*$('#control_div').fadeIn("slow");
+						$("#control_div").css({                   
+							'top': -$(document).height()+'px',
+							'left': $(document).width()/2+'px',
+							'zIndex': 0
+						}).animate({           
+						    top: $(document).height()/2+'px'
+						}, 1550, 'swing');*/
+						
+						
 					},time_descricao);
 						    
 				}

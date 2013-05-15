@@ -43,7 +43,7 @@
 body
 {
 	overflow: hidden;
-	background: transparent !important;
+	background: #000 !important;
 }
 
 /*Home*/
@@ -586,6 +586,8 @@ hr.hr_custom
 	height: 30px;
 	border-radius: 50%;
 	cursor: pointer;
+	display:none;
+	z-index: -6000;
 }
 
 
