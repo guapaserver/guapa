@@ -767,6 +767,7 @@ clearInterval(highlighting)
 				
 		        
 				time = 2000;
+
 				/*
 				$("#fancybox-wrap").css({                      
 		        	 'top':'550px'
@@ -788,6 +789,8 @@ clearInterval(highlighting)
 		            top: '0',
 		        }, time, 'swing');*/
 				
+				
+
 				blur(slide,imagem_fundo,ext);
 				
 				setTimeout(function(){
@@ -796,7 +799,7 @@ clearInterval(highlighting)
 					$('#contatos_redes2').animate({
 						bottom: "-100px"
 					});
-					
+					$.fancybox.center(true);	
 					
 				},time);
 
@@ -805,7 +808,7 @@ clearInterval(highlighting)
             
             onComplete:function () {
 				
-
+				$.fancybox.center(true);
             },
             
             onCleanup:function () {

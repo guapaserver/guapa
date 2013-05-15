@@ -460,13 +460,11 @@
 			wrap
 				.css(final_pos)
 				.fadeIn( currentOpts.transitionIn == 'none' ? 0 : currentOpts.speedIn, _finish );
-				var timer = 5000;
+				var timer = 1000;
 			
-			$(fx).animate({           
-		            top: '0',
-		    }, timer, 'swing');
-		    
-		    $.fancybox.center(true);
+			$.fancybox.center(true);
+
+
 		},
 
 		_format_title = function(title) {
@@ -1009,7 +1007,7 @@
 			//wrap.fadeOut( currentOpts.transitionOut == 'none' ? 0 : currentOpts.speedOut, _cleanup);
 			time = 2000;
 				wrap.animate({
-				    top: $(document).height()+'px'
+				    top: $(window).height()+'px'
 				}, time, function() {
 			    wrap.fadeOut( currentOpts.transitionOut == 'none' ? 0 : currentOpts.speedOut, _cleanup);
 			  });	
