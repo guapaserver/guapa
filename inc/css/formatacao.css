@@ -585,7 +585,12 @@ hr.hr_custom
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
+	cursor: pointer;
 }
+
+
+
+
 
 .prev_mouse
 {

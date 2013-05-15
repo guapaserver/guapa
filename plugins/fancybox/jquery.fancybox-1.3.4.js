@@ -376,6 +376,7 @@
 				pos = wrap.position(),
 
 				start_pos = {
+					//top	 : pos.top,
 					top	 : pos.top,
 					left : pos.left,
 					width : wrap.width(),
@@ -459,6 +460,13 @@
 			wrap
 				.css(final_pos)
 				.fadeIn( currentOpts.transitionIn == 'none' ? 0 : currentOpts.speedIn, _finish );
+				var timer = 5000;
+			
+			$(fx).animate({           
+		            top: '0',
+		    }, timer, 'swing');
+		    
+		    $.fancybox.center(true);
 		},
 
 		_format_title = function(title) {
@@ -718,7 +726,7 @@
 				}
 			}
 
-			to.top = parseInt(Math.max(view[3] - 20, view[3] + ((view[1] - to.height - 40) * 0.5)), 10);
+			to.top = -$(document).height();//parseInt(Math.max(view[3] - 20, view[3] + ((view[1] - to.height - 40) * 0.5)), 10);
 			to.left = parseInt(Math.max(view[2] - 20, view[2] + ((view[0] - to.width - 40) * 0.5)), 10);
 
 			return to;
@@ -990,7 +998,7 @@
 
 			fx.prop = 1;
 
-			$(fx).animate({ prop: 0 }, {
+			$(fx).animate({ prop: 0 , top: 1000}, {
 				 duration : currentOpts.speedOut,
 				 easing : currentOpts.easingOut,
 				 step : _draw,
@@ -998,7 +1006,13 @@
 			});
 
 		} else {
-			wrap.fadeOut( currentOpts.transitionOut == 'none' ? 0 : currentOpts.speedOut, _cleanup);
+			//wrap.fadeOut( currentOpts.transitionOut == 'none' ? 0 : currentOpts.speedOut, _cleanup);
+			time = 2000;
+				wrap.animate({
+				    top: $(document).height()+'px'
+				}, time, function() {
+			    wrap.fadeOut( currentOpts.transitionOut == 'none' ? 0 : currentOpts.speedOut, _cleanup);
+			  });	
 		}
 	};
 
@@ -1029,7 +1043,7 @@
 			.animate({
 				'top' : parseInt(Math.max(view[3] - 20, view[3] + ((view[1] - content.height() - 40) * 0.5) - currentOpts.padding)),
 				'left' : parseInt(Math.max(view[2] - 20, view[2] + ((view[0] - content.width() - 40) * 0.5) - currentOpts.padding))
-			}, typeof arguments[0] == 'number' ? arguments[0] : 200);
+			}, typeof arguments[0] == 'number' ? arguments[0] : 1200);
 	};
 
 	$.fancybox.init = function() {

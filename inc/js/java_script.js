@@ -746,6 +746,7 @@ clearInterval(highlighting)
 					
 		
 		$.fancybox({		
+			hideOnContentClick : false,
 			'href'              :url,   
 			'autoScale'         :false,	
 			'autoDimensions	'	:true,
@@ -755,14 +756,38 @@ clearInterval(highlighting)
 			'easingIn'          :'swing',
 			'easingOut'         :'swing',
 			'speedIn'			:1500,
+			//'speedOut'			:2500,
 			'type'				: tipo,
 			'width'             :largura,
 			'height'		    :altura,
 			'overlayColor'      :'#000',
 			'overlayOpacity': 0	,
 			onStart:function () {
-
+			
+				
+		        
 				time = 2000;
+				/*
+				$("#fancybox-wrap").css({                      
+		        	 'top':'550px'
+		        }).animate({           
+		            top: '200px',
+		        }, time, 'swing');*/
+		       
+		       
+		       
+				//$("#fancybox-wrap").hide();
+				
+				/*$("#fancybox-wrap").stop().css({                      
+		        	 'top':'-2050px'
+		        }).animate({           
+		            top: '0',
+		        }, time, 'swing');*/
+		        
+		       /* $("#fancybox-wrap").animate({           
+		            top: '0',
+		        }, time, 'swing');*/
+				
 				blur(slide,imagem_fundo,ext);
 				
 				setTimeout(function(){
@@ -771,23 +796,25 @@ clearInterval(highlighting)
 					$('#contatos_redes2').animate({
 						bottom: "-100px"
 					});
+					
+					
 				},time);
 
 				$('#control_div').fadeOut('slow');
             },
             
             onComplete:function () {
-
+				
 
             },
             
             onCleanup:function () {
-            time = 2000;
-               $("#fancybox-wrap").animate({
-				    top: '1000'
-				  }, time);
+            	time = 2000;
+				/*$("#fancybox-wrap").animate({
+				    top: $(document).height()+'px'
+				}, time);*/
 
-				  offblur(slide,imagem_fundo,ext);
+				 offblur(slide,imagem_fundo,ext);
 
 				  
 				  setTimeout(function(){
