@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+[facebook_compartilhar]
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="DESCRIPTION" content="[site_descricao]" />
+<meta name="KEYWORDS" lang="pt" content="[site_palavra_chave]" />
+
+<meta name="RATING" content="General" />
+<meta name="author" content="[site_autor]" />
+<title>[site_titulo]</title>
+
+<script type="text/javascript" src="[url_virtual]inc/js/jquery.js" ></script>
+
+<script src="[url_virtual]inc/js/jquery.blockUI.js"></script>
+
+<script type="text/javascript" src="[url_virtual]plugins/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="[url_virtual]plugins/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="[url_virtual]plugins/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+
+<!--[if lt IE 10]>
+<script type="text/javascript" src="[url_virtual]inc/css/PIE-1.0.0/PIE_uncompressed.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript" src="[url_virtual]plugins/jrumble/jrumble.js"></script>
+
+<script src="[url_virtual]inc/js/java_script.js"></script>
+
+<link href="[url_virtual]inc/css/formatacao.css" rel="stylesheet" type="text/css" />
+
+<!-- Plugin super sized-->
+<link rel="stylesheet" href="[url_virtual]plugins/supersized/css/supersized.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="[url_virtual]plugins/supersized/theme/supersized.shutter.css" type="text/css" media="screen" />
+<script type="text/javascript" src="[url_virtual]plugins/supersized/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="[url_virtual]plugins/supersized/js/supersized.3.2.7.js"></script>
+<script type="text/javascript" src="[url_virtual]plugins/supersized/theme/supersized.shutter.min.js"></script>
+<script type="text/javascript" src="[url_virtual]plugins/supersized/js/my_supersize.js"></script>
+<!-- END super sized-->
+
+<!-- Plugin jquerywanderwall -->
+<link rel="stylesheet" href="[url_virtual]plugins/jquerywanderwall/files/main.css" type="text/css" media="screen" />
+<script type="text/javascript" src="[url_virtual]plugins/jquerywanderwall/files/application.js"></script>
+
+<!--[if IE]> 
+<link rel="stylesheet" href="[url_virtual]plugins/jquerywanderwall/files/ie.css" type="text/css" charset="utf-8">
+<![endif]-->
+<!-- FIM jquerywanderwall -->
+
+</head>
+	<body onResize="resize_contato()">
+		<div id="menu" class="control_mouse">
+			<div id="capa_transparente"></div>
+			
+			<div id="m_logo"><a href="[url_virtual]"><img src="[url_virtual]imagens/site/guapa.png" alt="Agencia Guapa" style="border: 0;" /></a></div>
+			<div id="m_a_guapa" class="menu_guapa"><a href="#" ><img src="[url_virtual]imagens/site/a_guapa.png" alt="A Guapa" style="border: 0;" /></a></div>
+			<div id="m_cases" class="menu_guapa selecionado"><a href="#" ><img src="[url_virtual]imagens/site/cases.png" alt="Cases" style="border: 0;" /></a></div>
+			<div id="m_contato" class="menu_guapa"><a href="#" ><img src="[url_virtual]imagens/site/contato.png" alt="Contato" style="border: 0;" /></div>
+		</div>
+
+		<!--Arrow Navigation-->
+		<div id="lateral_esquerda" style="display: none;">
+			<div id="id_prevslide">
+				<a id="prevslide" class="load-item"></a>
+			</div>
+		</div>
+		
+		<div id="lateral_direita" style="display: none;">
+			<div id="id_nextslide">
+				<a id="nextslide" class="load-item id_nextslide"></a>
+			</div>
+		</div>
+		
+		<div id="sombra_info">
+			<div id="sombra_info_relative">
+				
+			</div>
+		</div>
+		
+		<div class="info control_mouse">
+			[empresas_descricao]
+		</div>
+		<input type="hidden" id="url_virtual" name="url_virtual" value="[url_virtual]">
+		
+		<div id="div_cases" data-option-value="cases_sup_size"><ul id="supersized"></ul></div>
+		<div id="div_a_guapa" data-option-value="cases_sup_size" style="display: none;">
+			<ul id="supersized2" class="quality" style="visibility: visible;"></ul>
+		</div>
+		<div id="div_a_guapa2" data-option-value="cases_sup_size" style="display: none;">
+			<ul id="supersized3" class="quality" style="visibility: visible;"></ul>
+		</div>
+		
+		<div id="contenedor_menu_guapa">
+			<div id="menu_guapa">
+				<div id="menu_line">
+					<div id="frame1" class="frame first frame_selected" data-option-value="1"> 
+						<a style="display: block;" id="link1" href="#" alt="">
+						<img src="[url_virtual]imagens/site/ideia_branco.png" width="31" height="34" />
+						
+						</a>
+					</div>
+					
+					<div id="frame2" class="frame two" data-option-value="2"> 
+						<a style="display: block;" id="link2" href="#" alt="">
+						<img src="[url_virtual]imagens/site/interrogacao_preto.png" width="20" height="34" />
+						</a>
+					</div>
+					
+					<div  id="frame3" class="frame three" data-option-value="3"> 
+						<a style="display: block;" id="link3" href="#" alt="">
+						<img src="[url_virtual]imagens/site/usuario_preto.png" width="14" height="34" />
+						</a>
+					</div>
+					<div id="lavaLamp"></div>
+				</div>
+				
+				<!--begin containers-->
+				<div class="pageholder">
+					<div class="pageslider">
+						
+							
+						<div class="page ">
+							    <div class="m_page_1 bussola" data-option-value="1"></div>
+						</div>
+					
+						<div class="page" >
+							     <div class="m_page_2 bussola" data-option-value="2"></div>
+
+						</div>
+						
+						<div class="page" >
+							    <div class="m_page_3 bussola" data-option-value="3"></div>
+						</div>
+						
+						<div class="page ">
+								 <div class="m_page_4 bussola"></div>	   
+						</div>
+						
+						<div class="page">
+								<div class="m_page_5 bussola"></div>
+						</div>
+					</div>
+				</div>
+				
+				<!--end containers-->
+			</div>
+		</div>
+	
+		<iframe id='google_maps' width="425" height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Jurand%C3%A1,+199,+S%C3%A3o+Paulo&amp;aq=0&amp;oq=rua+juranda+199&amp;sll=-23.682804,-46.595546&amp;sspn=1.011134,1.422729&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Jurand%C3%A1,+199+-+Alto+de+Pinheiros,+S%C3%A3o+Paulo,+05442-070&amp;t=m&amp;z=14&amp;ll=-23.549969,-46.696013&amp;output=embed"></iframe>		
+
+		<div id="contato_conteiner" style="display: none;">
+			<div id="endereco_guapa"></div>
+			
+			<form id="formulario_contato" action="" method="post">
+				
+				<h2>PREENCHA OS CAMPOS ABAIXO:</h2>
+				<input type="text" value="" name="_nome" id="_nome" placeholder="Nome">
+				<input type="text" value="" name="_email" id="_email" placeholder="E-mail" >
+				<input type="text" value="" name="_telefone" id="_telefone" placeholder="Telefone" >
+				<textarea name="_mensagem" id="_mensagem" placeholder="Mensagem"></textarea>
+				<img src="[url_virtual]imagens/site/btn_enviar.png" onclick="return formulario_contato_envia()" style="float: right;" >
+				<div id="msg_contato"></div>
+				
+			</form>
+			
+			<div id="contatos_redes">
+
+				<a href="https://www.facebook.com/AgenciaGuapa" target="_blank"><img src="[url_virtual]imagens/site/btn_face.png"/></a>
+				<a href="https://twitter.com/AgenciaGuapa" target="_blank"><img src="[url_virtual]imagens/site/btn_twitter.png"/></a>
+				<span><a href="mailto:contato@agenciaguapa.com.br">CONTATO@AGENCIAGUAPA.COM.BR</a></span>
+
+				<span>55 11 2594-3035</span>
+			</div>
+		</div>	
+		
+		<div id="contatos_redes2">
+
+			<a href="https://www.facebook.com/AgenciaGuapa" target="_blank"><img src="[url_virtual]imagens/site/btn_face.png"/></a>
+			<a href="https://twitter.com/AgenciaGuapa" target="_blank"><img src="[url_virtual]imagens/site/btn_twitter.png"/></a>
+			<span><a href="mailto:contato@agenciaguapa.com.br">CONTATO@AGENCIAGUAPA.COM.BR</a></span>
+
+			<span>55 11 2594-3035</span>
+		</div>
+	
+		<div id="bg_blur">
+		</div>
+		
+		<div id="div_asignatura">
+			<div class="asignatura"></div>
+		</div>
+		
+		<input type="hidden" id="url_virtual" value="[url_virtual]">
+		<input type="hidden" id="ambiente_slider_gc" value="1">
+		<input type="hidden" id="current_slider_gc" value="0">
+
+		<div id="control_div" class="view_case"></div>
+
+	</body>
+	
+
+</html>
