@@ -54,24 +54,34 @@
 		<div id="menu" class="control_mouse">
 			<div id="capa_transparente"></div>
 			
-			<div id="m_logo"><a href="[url_virtual]"><img src="[url_virtual]imagens/site/guapa.png" alt="Agencia Guapa" style="border: 0;" /></a></div>
-			<div id="m_a_guapa" class="menu_guapa"><a href="#" ><img src="[url_virtual]imagens/site/a_guapa.png" alt="A Guapa" style="border: 0;" /></a></div>
-			<div id="m_cases" class="menu_guapa selecionado"><a href="#" ><img src="[url_virtual]imagens/site/cases.png" alt="Cases" style="border: 0;" /></a></div>
-			<div id="m_contato" class="menu_guapa"><a href="#" ><img src="[url_virtual]imagens/site/contato.png" alt="Contato" style="border: 0;" /></div>
+			<div id="m_logo"><a id="a_logo" href="[url_virtual]"></a></div>
+			
+			<div id="m_cases" class="menu_guapa">
+				[menu_cases]
+			</div>
+			
+			<div id="m_a_guapa" class="menu_guapa"><a href="#">A AGENCIA</a></div>
+			
+			<div id="m_contato" class="menu_guapa"><a href="#" >CONTATO</a></div>
+				
+			<div id="m_redes" class="menu_guapa">
+				<a href="#" >facebook</a>
+				<a href="#" >twitter</a>
+			</div>
 		</div>
 
 		<!--Arrow Navigation-->
-		<div id="lateral_esquerda" style="display: none;">
-			<div id="id_prevslide">
+		<!--<div id="lateral_esquerda" >
+			<div id="id_prevslide" style="display: none;">
 				<a id="prevslide" class="load-item"></a>
 			</div>
 		</div>
 		
-		<div id="lateral_direita" style="display: none;">
-			<div id="id_nextslide">
+		<div id="lateral_direita" >
+			<div id="id_nextslide" style="display: none;">
 				<a id="nextslide" class="load-item id_nextslide"></a>
 			</div>
-		</div>
+		</div>-->
 		
 		<div id="sombra_info">
 			<div id="sombra_info_relative">
@@ -148,8 +158,8 @@
 			</div>
 		</div>
 	
-		<iframe id='google_maps' width="425" height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Jurand%C3%A1,+199,+S%C3%A3o+Paulo&amp;aq=0&amp;oq=rua+juranda+199&amp;sll=-23.682804,-46.595546&amp;sspn=1.011134,1.422729&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Jurand%C3%A1,+199+-+Alto+de+Pinheiros,+S%C3%A3o+Paulo,+05442-070&amp;t=m&amp;z=14&amp;ll=-23.549969,-46.696013&amp;output=embed"></iframe>		
-
+	<!--	<iframe id='google_maps' width="425" height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Jurand%C3%A1,+199,+S%C3%A3o+Paulo&amp;aq=0&amp;oq=rua+juranda+199&amp;sll=-23.682804,-46.595546&amp;sspn=1.011134,1.422729&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Jurand%C3%A1,+199+-+Alto+de+Pinheiros,+S%C3%A3o+Paulo,+05442-070&amp;t=m&amp;z=14&amp;ll=-23.549969,-46.696013&amp;output=embed"></iframe>		
+-->
 		<div id="contato_conteiner" style="display: none;">
 			<div id="endereco_guapa"></div>
 			
@@ -177,8 +187,6 @@
 		
 		<div id="contatos_redes2">
 
-			<a href="https://www.facebook.com/AgenciaGuapa" target="_blank"><img src="[url_virtual]imagens/site/btn_face.png"/></a>
-			<a href="https://twitter.com/AgenciaGuapa" target="_blank"><img src="[url_virtual]imagens/site/btn_twitter.png"/></a>
 			<span><a href="mailto:contato@agenciaguapa.com.br">CONTATO@AGENCIAGUAPA.COM.BR</a></span>
 
 			<span>55 11 2594-3035</span>
@@ -187,7 +195,7 @@
 		<div id="bg_blur">
 		</div>
 		
-		<div id="div_asignatura">
+		<div id="div_asignatura" style="display: none;">
 			<div class="asignatura"></div>
 		</div>
 		
@@ -195,7 +203,7 @@
 		<input type="hidden" id="ambiente_slider_gc" value="1">
 		<input type="hidden" id="current_slider_gc" value="0">
 
-		<div id="control_div" style="display: none;" class="view_case"></div>
+		<!--<div id="control_div" style="display: none;" class="view_case"></div>-->
 
 	</body>
 	

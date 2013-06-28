@@ -176,51 +176,100 @@ body
 
 #menu
 {
-	top:-260px;
+	top:0px;
 	width: 421px;
 	height: 280px;
 	position: absolute;
 	margin-left: 21px;
+	opacity: 0;
+}
 
+
+#a_logo
+{
+	background: url(../../imagens/site/guapa.png) no-repeat;
+	display: block;
+	width: 133px;
+	height: 32px;
+	position: relative;	
+}
+
+.a_logo_guapa
+{
+	background: url(../../imagens/site/guapa.png) 0px -33px no-repeat !important;
+	
 }
 
 #m_logo
 {
-	
-	width: 143px;
-	height: 250px;
+	display: block;
+	float: left;
+	margin-top:20px;
+	margin-left:20px;
+	width:100%;
+	height: 32px;
 	z-index: 200;
-	position: absolute;
-}
-
-#m_a_guapa
-{
-	left: 20px;
-	top: 38px;
-	width: 133px;
-	height: 170px;
-	z-index: 10;
-	position: absolute;
+	/*position: absolute;*/
 }
 
 #m_cases
 {
-	left: 20px;
+	display: block;
+	float: left;
 	top: 45px;
-	width: 120px;
-	height: 165px;
+	width:100%;
+	min-height: 50px;
 	z-index: 50;
-	position: absolute;
+	/*position: absolute;*/
+	margin:20px 0 20px 20px;
+	font-size: 12px;
+}
+
+#m_cases a
+{
+	display:block;
+	float: left;
+	width: 100%;
+}
+
+#m_a_guapa
+{
+	display: block;
+	float: left;
+	margin-left:20px;
+	width:100%;
+	height: 25px;
+	z-index: 10;
+	/*position: absolute;*/
 }
 
 #m_contato
 {
-	left: 20px;
-	top: 30px;
-	width: 114px;
-	height: 161px;
+	display: block;
+	float: left;
+	margin-left:20px;
+	width: 100%;
+	height: 25px;
 	z-index: 20;
-	position: absolute;
+	/*position: absolute;*/
+}
+
+#m_redes
+{
+	display: block;
+	float: left;
+	margin-left:20px;
+	width: 114px;
+	height: 50px;
+	z-index: 20;
+	/*position: absolute;*/
+}
+
+#m_redes a
+{
+	display: block;
+	width:100%;
+	float: left;
 }
 
 .info_e
@@ -352,8 +401,26 @@ hr.hr_custom
 	width: 459px;
 	height: 71px;
 	position: relative;
-	bottom: 0px;
+	bottom: 0px; 
 }
+
+.menu_guapa a
+{
+	color: #000;
+	text-decoration: none;
+}
+
+.menu_guapa a:hover
+{
+	color:#666;
+}
+
+.menu_guapa_color a
+{
+	color: #828282;	
+}
+
+
 
 #menu_line
 {
@@ -363,7 +430,7 @@ hr.hr_custom
 	width: 292px;
     margin-left: 115px;
     z-index:-100;
-    position:relative;
+        position:relative;
 }
 
 .bussola
@@ -559,15 +626,24 @@ hr.hr_custom
 	float: left;
 	margin-bottom: 10px;
 	margin-right: 10px;
-	color:#fff;
+	color:#000;
 }
 
 #contatos_redes2 span
 {
 	float: left;
 	font-family: 'AristaAlternateLight';
-	color: #fff;
+	color: #000;
 	width: 100%;
+}
+
+.contatos_redes2_color a
+{
+	color: #828282 !important;
+}
+.contatos_redes2_color span
+{
+	color: #828282 !important;
 }
 
 #contatos_redes2 span a
@@ -591,7 +667,15 @@ hr.hr_custom
 }
 
 
+.selecionado
+{
+	color: #fff !important;
+}
 
+.selecionado a
+{
+	color: #fff !important;
+}
 
 
 .prev_mouse

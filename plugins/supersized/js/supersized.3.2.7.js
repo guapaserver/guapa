@@ -490,7 +490,7 @@
 				var ambiente_slider_gc = $('#ambiente_slider_gc').val();
 				if(ambiente_slider_gc == 1)
 				{
-					$('#sombra_info_relative').stop().css({  
+					/*$('#sombra_info_relative').stop().css({  
 				     	'display': 'block',                        
 						'right' : '0'
 					 }).animate({       
@@ -503,7 +503,7 @@
 					 }).animate({       
 					    'right' : '-239px' 
 					 }, 1000, 'swing');
-					 
+					 */
 				}
 				else
 				{
@@ -670,7 +670,7 @@
 				var ambiente_slider_gc = $('#ambiente_slider_gc').val();
 				if(ambiente_slider_gc == 1)
 				{
-					$('#sombra_info_relative').stop().css({  
+					/*$('#sombra_info_relative').stop().css({  
 				     	'display': 'block',                        
 						'right' : '0'
 					 }).animate({       
@@ -682,7 +682,7 @@
 						'right' : '0'
 					 }).animate({       
 					    'right' : '-239px' 
-					 }, 1000, 'swing');
+					 }, 1000, 'swing');*/
 					 
 				}
 				else
@@ -1016,7 +1016,7 @@
 				
 				case '1':
 				
-					$('#sombra_info_relative').stop().css({  
+					/*$('#sombra_info_relative').stop().css({  
 				     	'display': 'block',                        
 						'right' : '-239px'
 					 }).animate({       
@@ -1028,7 +1028,7 @@
 						'right' : '-239px'
 					 }).animate({       
 					    'right' : '12' 
-					 }, 1000, 'swing');
+					 }, 1000, 'swing');*/
 					 
 					 
 				break;

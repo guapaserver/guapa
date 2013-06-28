@@ -1,18 +1,20 @@
 
-function my_supersize(data)
+function my_supersize(data, num_slider)
 {
 	$("#supersized").empty(); //remove the background image if exist
+	
+	num_slider++;
 	
 	$.supersized({
 		
 		// Functionality
 		//element_ul              :   element_bg,			// Element
 		slideshow               :   1,			// Slideshow on/off
-		autoplay				:	1,			// Slideshow starts playing automatically
-		start_slide             :   1,			// Start slide (0 is random)
+		autoplay				:	0,			// Slideshow starts playing automatically
+		start_slide             :   num_slider,			// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
 		random					: 	0,			// Randomize slide order (Ignores start slide)
-		slide_interval          :   160000,		// Length between transitions
+		slide_interval          :   0,		// Length between transitions
 		transition              :   6, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 		transition_speed		:	1000,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
@@ -44,7 +46,7 @@ function my_supersize(data)
 	
 }
 
-function atualiza_slide(sld, direcao) {
+function atualiza_slide(sld, direcao, num_slider) {
 	var url_virtual = $('#url_virtual').val();
 	$('#lateral_esquerda').css({                      
 		'width':$(document).width()/3+"px",
@@ -104,7 +106,7 @@ function atualiza_slide(sld, direcao) {
 			        	 'display':'none'
 			       });*/
 			       $(this).hide();
-			       my_supersize(data.data);
+			       my_supersize(data.data, num_slider);
 			       menu_site_a_guapa(time_menu_slider,topo , supersized_top, supersized2_top, sld, direcao);
 			       
 				    setTimeout(function(){
@@ -117,10 +119,10 @@ function atualiza_slide(sld, direcao) {
 			}
 			else
 			{
-
+				
 				if(direcao != 'home')
 				{ 
-					$('#sombra_info_relative').show();
+					//$('#sombra_info_relative').show();
 					$('#sombra_info_relative').css({  
 						//'display': 'block',                    
 						'right' : '0'
@@ -129,7 +131,7 @@ function atualiza_slide(sld, direcao) {
 					    //,'display': 'none' 
 					 }, 1000, function(){
 					 	$(this).hide();
-					   	my_supersize(data.data);
+					   	 my_supersize(data.data, num_slider);
 						 menu_site_a_guapa(time_menu_slider,topo , supersized_top, supersized2_top, sld, direcao);
 						 
 						 
@@ -138,9 +140,9 @@ function atualiza_slide(sld, direcao) {
 				}
 				else
 				{
-				 	 my_supersize(data.data);
+				 	 my_supersize(data.data, num_slider);
 				   	 menu_site_a_guapa(time_menu_slider,topo , supersized_top, supersized2_top, sld, direcao);
-					
+				
 				}
 			  
 				setTimeout(function(){
@@ -194,8 +196,8 @@ function atualiza_slide(sld, direcao) {
 						time_descricao = 3500;
 					}
 				 	setTimeout(function(){
-						$(".info_0").show();
-					 	$(".info_0").css({ 
+						$(".info_"+num_slider).show();
+					 	$(".info_"+num_slider).css({ 
 					 		//'display':'block',                     
 							'top':'325px'
 							 // 'display':'none'
@@ -224,7 +226,7 @@ function atualiza_slide(sld, direcao) {
              }
              else
              {
-             	$('#div_asignatura').hide();
+             	//$('#div_asignatura').hide();
              	//$('.info').css({'display': 'none'});
              	$('.info').hide();
              }
@@ -264,10 +266,15 @@ function menu_site_a_guapa(time_menu_slider,topo , supersized_top, supersized2_t
 		{
 			setTimeout(function(){
 				sombra_descricao_cases();
-				 $('#div_asignatura').show('slow');
+				// $('#div_asignatura').show('slow');
 			},time_sombra_descricao);	
 			
 			$('#control_div').show();
+			
+			$("#a_logo").removeClass('a_logo_guapa');
+			$("#contatos_redes2").removeClass('contatos_redes2_color');
+			$(".menu_guapa").removeClass('menu_guapa_color');
+			
 		}
 		else if(sld == 2)
 		{
@@ -279,7 +286,11 @@ function menu_site_a_guapa(time_menu_slider,topo , supersized_top, supersized2_t
 			}).animate({       
 			    'bottom' : '0'
 			}, 1000, 'swing');
-
+			
+			$("#a_logo").addClass('a_logo_guapa');
+			$("#contatos_redes2").addClass('contatos_redes2_color');
+			$(".menu_guapa").addClass('menu_guapa_color');
+			
 			$('#control_div').hide();
 		}
 		
@@ -326,7 +337,7 @@ function menu_site_a_guapa(time_menu_slider,topo , supersized_top, supersized2_t
 function sombra_descricao_cases()
 {
 	//Movimenta a sombra da Descricao dos CASES
-	$('#sombra_info_relative').show();
+	//$('#sombra_info_relative').show();
      $('#sombra_info_relative').stop().css({  
      	//'display': 'block',                        
 		'right' : '-239px'
@@ -352,21 +363,18 @@ function sombra_descricao_cases()
  {
  	if($("#menu").length > 0)
 	{
-		var time_menu = 1500;
+		var time_menu = 500;
 		
 		$("#menu").stop().animate({
-			top:"0px"
-		}, {
-			duration: time_menu,
-			easing: "easeOutBounce"
-		});
+			opacity:"1"
+		}, time_menu);
 		
-		setTimeout(function(){
+		/*setTimeout(function(){
 			$('#m_a_guapa').css({ display: "block", opacity: 0 }).animate({ opacity: 1, left: "122px" }, {duration: 300, easing: "easeInExpo"});
 			$('#m_cases').css({ display: "block", opacity: 0 }).animate({ opacity: 1, left: "212px" }, {duration: 400, easing: "easeInExpo"});
 			$('#m_contato').css({ display: "block", opacity: 0 }).animate({ opacity: 1, left: "304px" }, {duration: 600, easing: "easeInElastic"});
 			
-		},time_menu);
+		},time_menu);*/
 	}
  }
 
@@ -376,20 +384,18 @@ function sombra_descricao_cases()
 	{
 		var time_menu = 1500;
 		
-		setTimeout(function(){
+		/*setTimeout(function(){
 			$('#m_a_guapa').css({ display: "block", opacity: 0 }).animate({ opacity: 1, left: "20px" }, {duration: 600, easing: "easeInElastic"});
 			$('#m_cases').css({ display: "block", opacity: 0 }).animate({ opacity: 1, left: "20px" }, {duration: 400, easing: "easeInExpo"});
 			$('#m_contato').css({ display: "block", opacity: 0 }).animate({ opacity: 1, left: "20px" }, {duration: 300, easing: "easeInExpo"});
 			
-		},0);
+		},0);*/
 		
 		setTimeout(function(){
 			$("#menu").stop().animate({
-				top:"-260px"
-			}, {
-				duration: time_menu,
-				easing: "easeOutBounce"
-			});
+				//top:"-260px"
+				opacity:"0"
+			}, time_menu );
 		},time_menu);
 		
 	}

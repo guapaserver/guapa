@@ -188,8 +188,19 @@ class Html
 			$sliderbgs = "";
 			$empresas_descricao = "";
 			$cont = 0;
+			$menu_cases = "";
 			foreach($rs_p as $l_p)
 			{
+				if($cont == 0)
+				{
+					$class_selecionado = "selecionado";
+				}
+				else {
+					$class_selecionado = "";
+				}
+				
+				$menu_cases .= "<a class=\"a_cases_click ".$class_selecionado."\" href=\"#\" data-option-value=\"".$cont."\">".strtoupper($l_p['nome'])."</a>";
+				
 				if(file_exists(($url_fisico."imagens/produtos/".$l_p['logo_imagem'])))
 				{
 					$l_i = getimagesize($url_virtual."imagens/produtos/".$l_p['logo_imagem']);
@@ -238,6 +249,7 @@ class Html
 			"[formatacao_custom]" => "".$formatacao_custom."",
 			"[logo]" => "".$logo."",
 			"[menu]" => "".$menu."",
+			"[menu_cases]" => "".$menu_cases."",
 			"[menu_direito]" => "".$menu_direito."",
 			"[sub_menu]" => "".$sub_menu."",
 			"[corpo]" => "".$this->corpo."",

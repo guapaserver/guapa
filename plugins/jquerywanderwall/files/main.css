@@ -16,7 +16,7 @@ Testing has been conducted on FF 3.6, Chrome, Safari 4.0 and IE 6.0 for backward
 
 
 /*Defaults for page links*/
-a,a:link, a:visited { text-decoration:none; color: #C52A0B;}
+/*a,a:link, a:visited { text-decoration:none; color: #C52A0B;}*/
 a:hover {color: #448da6;}
 img { border:0; }
 * { zoom: 1; }

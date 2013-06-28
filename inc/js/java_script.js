@@ -2068,7 +2068,7 @@ function refresh_carrinho(row)
 		
 		if($('#div_cases').length > 0)
 		{
-			atualiza_slide('1','home');
+			atualiza_slide('1','home', '0');
 		}
 	
 		/*if($('#bussola').length > 0)
@@ -2428,7 +2428,7 @@ function refresh_carrinho(row)
 					$('#div_a_guapa').css({'display': 'block'});
 					$('#div_cases').css({'display': 'block'});
 					setTimeout(function(){
-						atualiza_slide('2', 'down');
+						atualiza_slide('2', 'down', '0');
 					},time_contato_selecionado);
 						
 					//Fim Movimenta os bg na vertical					
@@ -2449,11 +2449,14 @@ function refresh_carrinho(row)
 				$('#m_logo').css({'z-index':'10' });
 
 				$(this).css({'z-index':'100' });
+				$('.a_cases_click').removeClass('selecionado');
 			}
 		});
 		
-		$('#m_cases').click(function(){
-			
+		
+		
+		//$('#m_cases').click(function(){
+		$('.a_cases_click').click(function(){
 			
 			if(!$(this).hasClass('selecionado'))
 			{
@@ -2465,11 +2468,13 @@ function refresh_carrinho(row)
 					fecha_contato();
 					$('.menu_guapa').removeClass('selecionado');
 					$(this).addClass('selecionado');
-					$(this).css({'z-index':'100' });
-					$('#m_a_guapa').css({'z-index':'10' });
-					$('#m_contato').css({'z-index':'20' });
+					//$(this).css({'z-index':'100' });
+					//$('#m_a_guapa').css({'z-index':'10' });
+					//$('#m_contato').css({'z-index':'20' });
 					time_contato_selecionado = 1000;
 				}
+				
+				var num_slider = $(this).attr('data-option-value');
 				
 				if(ambiente_slider_gc != 1)
 				{
@@ -2481,7 +2486,7 @@ function refresh_carrinho(row)
 					$('#div_cases').css({'display': 'block'});
 	
 					setTimeout(function(){
-						atualiza_slide('1', 'up');
+						atualiza_slide('1', 'up', num_slider);
 					},time_contato_selecionado);
 					
 					
@@ -2508,11 +2513,20 @@ function refresh_carrinho(row)
 					}
 					
 					$('.menu_guapa').removeClass('selecionado');
+					$('.a_cases_click').removeClass('selecionado');
 					$(this).addClass('selecionado');
 					$(this).css({'z-index':'100' });
 					$('#m_a_guapa').css({'z-index':'10' });
 					$('#m_contato').css({'z-index':'20' });
 					$('#m_logo').css({'z-index':'200' });
+				}
+				else
+				{
+					$('.menu_guapa').removeClass('selecionado');
+					$('.a_cases_click').removeClass('selecionado');
+					$(this).addClass('selecionado');
+					
+					api.goTo(parseInt(num_slider)+1);
 				}
 			}
 		});
@@ -2555,7 +2569,7 @@ function refresh_carrinho(row)
 	                        right: '-239px'
 	                    },1500, function(){
 							abre_contato(imagem_blur, id_slide);
-							$("#div_asignatura").css('display','none');
+							//$("#div_asignatura").css('display','none');
 	 					});
 	                    
 	                });
@@ -2946,7 +2960,7 @@ function refresh_carrinho(row)
                     $("#sombra_info").animate({
                         right: '-239px'
                     },1500);
-                    $("#div_asignatura").css('display','none');
+                   // $("#div_asignatura").css('display','none');
                 });
     }
 	
@@ -2959,6 +2973,6 @@ function refresh_carrinho(row)
                     $(".info_"+id).animate({
                         top: '0px'
                     },1500);
-                    $("#div_asignatura").css('display','block');
+                   // $("#div_asignatura").css('display','block');
                 });
     }
